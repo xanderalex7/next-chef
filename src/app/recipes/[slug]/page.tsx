@@ -12,7 +12,6 @@ export default async function Recipe({ params }: RecipeProps) {
   const slug = (await params).slug;
   const data = await fetch(`${path}/${slug}`);
   const recipe = await data.json();
-  console.log(recipe);
 
   return (
     <div className="flex justify-center p-8">
